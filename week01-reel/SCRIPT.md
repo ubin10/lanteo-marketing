@@ -4,7 +4,7 @@
 **Pillar:** P3 Founder's Desk (brand intro) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** ~30s · 1080×1920
 **Goal:** introduce Lanteo and pin it as post #1.
 
-## Frames (in `export/`, also in Canva)
+## Frames (in `export/`, also in Canva: "Lanteo Week 1 Instagram Reel", https://canva.link/795obrv0h6r64ic)
 
 | File | Type | Used at |
 |---|---|---|
