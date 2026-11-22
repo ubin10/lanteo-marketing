@@ -1,0 +1,197 @@
+<!doctype html>
+<!-- Week 1 reel frames. One file, one frame per ?f=<id>.
+     Render: week01-reel/src/render.sh (Edge headless, 1080x1920).
+     Overlay frames (o-*) render on a TRANSPARENT ground for layering over video. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:'Space Grotesk';font-weight:300 700;src:url('../../brand/fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-weight:100 900;src:url('../../brand/fonts/inter-latin.woff2') format('woff2')}
+@font-face{font-family:'Caveat';font-weight:400 700;src:url('../../brand/fonts/caveat-latin.woff2') format('woff2')}
+
+:root{
+  --ink:#080e18; --raised:#0f1a28; --line:#1a2d44;
+  --jade:#0EA47D; --gold:#CBA54C; --breach:#ff3d5a;
+  --tx:#ddeeff; --tx2:#8ba3bf;
+  --display:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --hand:'Caveat',cursive;
+  --cta-grad:radial-gradient(circle at 35% 30%,#F6E3A6 0%,#D4AE55 55%,#AC8738 100%);
+  --on-cta:#170F02;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent}
+.frame{display:none;position:absolute;inset:0;width:1080px;height:1920px;overflow:hidden;color:var(--tx);font-family:var(--body)}
+.frame.on{display:block}
+
+/* the ground: ink with one cool light from the top, like the landing page */
+.ground{
+  background:var(--ink);
+  background-image:
+    radial-gradient(ellipse 900px 700px at 50% 0%,rgba(40,80,130,.28),transparent 70%),
+    linear-gradient(to bottom,rgba(20,34,56,.35),rgba(3,6,11,.4));
+}
+
+/* underline strokes: red = felt (the problem), jade = did (measured) */
+.u{position:relative;white-space:nowrap}
+.u::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.02em;height:.12em;border-radius:.06em}
+.u--bad::after{background:var(--breach)}
+.u--ok::after{background:var(--jade)}
+
+/* the mark (Momentum Coin), shared */
+.mark svg{display:block}
+.wordmark{font-family:var(--display);font-weight:600;letter-spacing:-.01em}
+.wordmark i{font-style:normal;color:var(--gold)}
+
+/* ══ COVER ══════════════════════════════════════════════════════════════
+   Grid crops a Reel cover to the centre 3:4 (y 240..1680). Everything
+   that matters sits inside it. */
+#cover .inner{position:absolute;left:90px;right:90px;top:430px}
+.kicker{font-family:var(--body);font-weight:600;font-size:30px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx2)}
+#cover h1{font-family:var(--display);font-weight:600;font-size:112px;line-height:1.06;letter-spacing:-.025em;margin-top:44px}
+#cover h1 + h1{margin-top:70px}
+#cover .dim{color:var(--tx2)}
+#cover .foot{position:absolute;left:90px;right:90px;top:1480px;display:flex;align-items:center;gap:22px}
+#cover .foot .wordmark{font-size:46px}
+
+/* ══ DIARY (faceless fallback for the notebook shot) ═══════════════════ */
+#diary .lamp{position:absolute;inset:0;
+  background:radial-gradient(ellipse 760px 900px at 50% 52%,rgba(214,160,80,.30),rgba(214,160,80,.08) 55%,transparent 75%)}
+#diary .leaf{
+  position:absolute;left:120px;top:330px;width:840px;height:1160px;
+  transform:rotate(-3deg);
+  background:#eae2d0;border-radius:6px;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.85),0 0 0 1px rgba(0,0,0,.25),inset 0 0 120px rgba(125,111,82,.25);
+}
+#diary .leaf::before{ /* gutter shade on the left = bound book */
+  content:"";position:absolute;left:0;top:0;bottom:0;width:120px;border-radius:6px 0 0 6px;
+  background:linear-gradient(to right,rgba(125,111,82,.45),rgba(168,154,125,.12) 60%,transparent)}
+#diary .leaf::after{ /* margin rule */
+  content:"";position:absolute;left:150px;top:40px;bottom:40px;width:2px;background:#b5776a;opacity:.6}
+#diary .entry{
+  --rule:74px;
+  position:absolute;left:180px;right:60px;top:110px;bottom:80px;
+  font-family:var(--hand);color:#243444;font-size:60px;line-height:var(--rule);
+  background-image:repeating-linear-gradient(to bottom,transparent 0 calc(var(--rule) - 2px),rgba(140,126,96,.55) calc(var(--rule) - 2px) var(--rule));
+}
+#diary .date{color:#8a7f66;font-size:48px}
+#diary .struck{display:block;text-decoration:line-through;text-decoration-thickness:3px;color:#8c8471}
+#diary b{font-weight:700}
+
+/* ══ OVERLAYS (transparent) ════════════════════════════════════════════
+   Text plates sit in the safe band: below the top 250px of UI, above the
+   bottom ~420px of caption/handle UI, clear of the right-hand buttons. */
+.plate{
+  position:absolute;left:70px;right:150px;
+  background:rgba(8,14,24,.86);border:1px solid rgba(26,45,68,.9);border-radius:22px;
+  padding:44px 50px 50px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07),0 24px 60px -24px rgba(0,0,0,.9);
+}
+.plate h2{font-family:var(--display);font-weight:600;font-size:82px;line-height:1.08;letter-spacing:-.02em}
+.plate .tag{font-family:var(--body);font-weight:600;font-size:28px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:22px}
+.tag--ok{color:var(--jade)}
+.tag--dim{color:var(--tx2)}
+#o-felt .plate,#o-did .plate{top:300px}
+#o-officer .plate{top:1160px}
+#o-officer h2{font-size:68px}
+
+/* ══ SPLIT MASK (transparent windows, footage goes UNDER this) ═════════ */
+#o-split .band{position:absolute;left:0;right:0;top:860px;height:200px;background:var(--ink);
+  border-top:2px solid var(--line);border-bottom:2px solid var(--line);
+  display:flex;align-items:center;justify-content:center;gap:28px}
+#o-split .band h2{font-family:var(--display);font-weight:600;font-size:84px;letter-spacing:-.02em}
+#o-split .pill{position:absolute;left:60px;font-family:var(--body);font-weight:600;font-size:26px;letter-spacing:.14em;text-transform:uppercase;
+  background:rgba(8,14,24,.82);border:1px solid var(--line);border-radius:999px;padding:14px 26px}
+#o-split .p1{top:280px;color:#e8dcc0}
+#o-split .p2{top:1100px;color:var(--jade)}
+#o-split .edge{position:absolute;left:0;right:0;height:14px}
+/* the whole frame is a transparent window except the band */
+
+/* ══ END CARD ══════════════════════════════════════════════════════════ */
+#end .inner{position:absolute;left:0;right:0;top:470px;text-align:center}
+#end .mark svg{margin:0 auto}
+#end .wordmark{display:block;font-size:92px;margin-top:40px}
+#end h2{font-family:var(--display);font-weight:600;font-size:88px;line-height:1.08;letter-spacing:-.02em;margin:110px 90px 0}
+#end .cta{display:inline-block;margin-top:80px;background:var(--cta-grad);color:var(--on-cta);
+  font-family:var(--display);font-weight:600;font-size:52px;padding:28px 64px;border-radius:14px;
+  box-shadow:0 18px 40px -18px rgba(203,165,76,.55)}
+#end .sub{margin-top:30px;font-size:34px;color:var(--tx2)}
+#end .fine{position:absolute;left:0;right:0;top:1440px;text-align:center;font-size:24px;color:#5f7590}
+</style>
+</head>
+<body>
+
+<!-- COVER -->
+<section class="frame ground" id="cover">
+  <div class="inner">
+    <p class="kicker">Futures trading journal</p>
+    <h1>Your journal says what you <span class="u u--bad">felt.</span></h1>
+    <h1 class="dim">Your fills say what you <span class="u u--ok" style="color:var(--tx)">did.</span></h1>
+  </div>
+  <div class="foot">
+    <span class="mark"><svg width="64" height="64" viewBox="0 0 120 120"><path d="M60 18 A42 42 0 0 1 95 78" fill="none" stroke="#CBA54C" stroke-width="7" stroke-linecap="round"/><path d="M60 102 A42 42 0 0 1 25 42" fill="none" stroke="#0EA47D" stroke-width="7" stroke-linecap="round"/><rect x="46" y="46" width="28" height="28" rx="4.5" fill="none" stroke="#ddeeff" stroke-width="6" transform="rotate(45 60 60)"/></svg></span>
+    <span class="wordmark">Lante<i>o</i></span>
+  </div>
+</section>
+
+<!-- DIARY fallback -->
+<section class="frame ground" id="diary">
+  <div class="lamp"></div>
+  <div class="leaf">
+    <div class="entry">
+      <p class="date">Mar 12</p>
+      <p>stopped out 9:47.<br>straight back in.
+        <span class="struck">told myself it was the same setup</span>
+        it wasn’t. doubled up<br>to get even. finished red.<br><b>stop revenge trading.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- OVERLAY: felt -->
+<section class="frame" id="o-felt">
+  <div class="plate">
+    <p class="tag tag--dim">The journal</p>
+    <h2>Your journal says what you <span class="u u--bad">felt.</span></h2>
+  </div>
+</section>
+
+<!-- OVERLAY: did -->
+<section class="frame" id="o-did">
+  <div class="plate">
+    <p class="tag tag--ok">The order log</p>
+    <h2>Your fills say what you <span class="u u--ok">did.</span></h2>
+  </div>
+</section>
+
+<!-- OVERLAY: officer label -->
+<section class="frame" id="o-officer">
+  <div class="plate">
+    <p class="tag tag--ok">AI Risk Officer</p>
+    <h2>Names the habit.<br>Cites the trades.</h2>
+  </div>
+</section>
+
+<!-- OVERLAY: split mask -->
+<section class="frame" id="o-split">
+  <span class="pill p1">What you wrote</span>
+  <div class="band"><h2>Same day. <span class="u u--ok">Measured.</span></h2></div>
+  <span class="pill p2">What you did</span>
+</section>
+
+<!-- END CARD -->
+<section class="frame ground" id="end">
+  <div class="inner">
+    <span class="mark"><svg width="220" height="220" viewBox="0 0 120 120"><path d="M60 18 A42 42 0 0 1 95 78" fill="none" stroke="#CBA54C" stroke-width="7" stroke-linecap="round"/><path d="M60 102 A42 42 0 0 1 25 42" fill="none" stroke="#0EA47D" stroke-width="7" stroke-linecap="round"/><rect x="46" y="46" width="28" height="28" rx="4.5" fill="none" stroke="#ddeeff" stroke-width="6" transform="rotate(45 60 60)"/></svg></span>
+    <span class="wordmark">Lante<i>o</i></span>
+    <h2>Make the habit measurable.</h2>
+    <span class="cta">lanteo.app</span>
+    <p class="sub">7-day trial · no card</p>
+  </div>
+  <p class="fine">Analyses past trades. Not financial advice.</p>
+</section>
+
+<script>
+  const f = new URLSearchParams(location.search).get('f') || 'cover';
+  document.getElementById(f).classList.add('on');
+</script>
+</body>
+</html>
