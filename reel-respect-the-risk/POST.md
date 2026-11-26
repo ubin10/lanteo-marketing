@@ -31,7 +31,7 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 Note: line 2 is a framing, not a statistic. If you want it stricter, use "Accounts rarely go on the first loss."
 
 ## YouTube Short
-**Title:** Two good corners. Then the one you didn't slow down for. #futurestrading
+**Title:** Respect the risk #futurestrading
 **Description:** caption paragraphs 1–3 + `https://lanteo.app/?utm_source=youtube` + the disclaimer.
 
 ## Story
