@@ -1,12 +1,18 @@
 # Reel: "Respect the risk"
 
-**Pillar:** P1 Habit Lab (after-a-win-streak / sizing up after wins) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** 10s · 1080×1920
-**Video:** `G:\My Drive\EdgeKeeper\video\Lanteo reel - Respect the risk (v1).mp4`
-**Footage:** AI-generated (Canva, H3 Max), "Lanteo Respect the Risk - alpine POV ride" in Canva Projects. Fictional, unbranded bike and pass. The crash is built in editing (`src/build_video.sh`); no impact or injury is shown.
+**Pillar:** P1 Habit Lab (after-a-win-streak / sizing up after wins) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** 10.5s · 1080×1920
 
-## Disclose it as AI
-- **Instagram:** Advanced settings → turn on the **AI label**.
-- **YouTube Shorts:** answer **Yes** to "altered or synthetic content".
+## Versions
+| | File (in `G:\My Drive\EdgeKeeper\video\`) | Picture | Build |
+|---|---|---|---|
+| **v2 (use this)** | `Lanteo reel - Respect the risk (v2, real footage).mp4` | Real POV ride: Pexels video 38771111 by Kibo (Pexels licence, free, no attribution required), cropped per shot | `src/build_video_stock.sh` |
+| v1 | `Lanteo reel - Respect the risk (v1).mp4` | AI-generated (Canva H3 Max), looked too synthetic | `src/build_video.sh` |
+
+In both, the crash is built in editing (roll, shake, zoom, cut to black, synthesised impact); no impact or injury is shown. v2's engine sound is borrowed from the Canva AI clip.
+
+## AI label
+- **v2:** the picture is real footage, so no AI label is needed for the visuals. Only the engine sound effect is AI-generated; that isn't a realistic depiction of a person or event, so the label is optional.
+- **v1 (if ever used):** Instagram → Advanced settings → **AI label** on; YouTube → **Yes** to "altered or synthetic content".
 
 ## Caption (Instagram)
 > Two good trades. A payout in sight. So you size up and stop braking for the corners.
