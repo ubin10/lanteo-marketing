@@ -37,3 +37,22 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 
 ## Story
 Reshare with a poll: **"Ever kept full size on a wild day because the payout was close?"** Guilty 🙋 / Never.
+
+## X (@Lanteoapp)
+Upload the same v3 file. Keep the link OUT of the main post (X shows posts with outside links to fewer people); put it in your own reply. X has no AI-label setting, so say it in the text. Pin the main post.
+
+**Main post:**
+> Clean trades, right on your plan. A payout in sight.
+>
+> Then volatility jumps, and you trade it like any other day. Or worse, you speed up to reach it faster.
+>
+> Respect the risk.
+>
+> (AI-generated footage)
+
+**Reply:**
+> Lanteo checks your trades against your own rules and shows you the day you stopped braking, trade by trade.
+>
+> 7-day trial, no card: lanteo.app/?utm_source=x
+>
+> Analyses past trades. Not financial advice.
