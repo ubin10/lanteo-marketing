@@ -2,7 +2,7 @@
 
 **Pillar:** P1 Habit Lab (trading to plan, then not sizing down when volatility picks up because the payout feels close) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** 10.5s · 1080×1920
 
-**Posted:** Instagram 2026-11-27 (v3, https://www.instagram.com/reel/DgPnoWeoyIl/; reposted after the first upload went out as a 1:1 square crop: on the desktop uploader set Crop → **Original**). YouTube: not yet.
+**Posted:** Instagram 2026-11-27 (v3, https://www.instagram.com/reel/DgPnoWeoyIl/; reposted after the first upload went out as a 1:1 square crop: on the desktop uploader set Crop → **Original**). YouTube Short 2026-11-27 (https://youtube.com/shorts/BCrOJIFUSwQ; description link clickable only after the channel's one-time verification).
 
 ## Versions
 | | File (in `G:\My Drive\EdgeKeeper\video\`) | Picture | Build |
