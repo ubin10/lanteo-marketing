@@ -1,0 +1,35 @@
+<!doctype html>
+<!-- X (Twitter) header banner, 1500x500. Render: profiles/src/render.sh
+     X overlays the avatar on the bottom-left (about x 40-380, y 330-500 at this size)
+     and phones crop a little top and bottom, so all content sits in x 470-1440, y 90-410. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face{font-family:'Space Grotesk';font-weight:300 700;src:url('../../brand/fonts/space-grotesk-latin.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-weight:100 900;src:url('../../brand/fonts/inter-latin.woff2') format('woff2')}
+:root{--ink:#080e18;--line:#1a2d44;--jade:#0EA47D;--gold:#CBA54C;--tx:#ddeeff;--tx2:#8ba3bf;
+  --display:'Space Grotesk',sans-serif;--body:'Inter',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1500px;height:500px;overflow:hidden}
+body{position:relative;color:var(--tx);font-family:var(--body);background:var(--ink);
+  background-image:
+    radial-gradient(ellipse 900px 420px at 62% -10%,rgba(40,80,130,.30),transparent 70%),
+    linear-gradient(to bottom,rgba(20,34,56,.30),rgba(3,6,11,.45))}
+/* the mark's two arcs, very large and faint, running off the right edge */
+.arcs{position:absolute;left:1090px;top:-50px;opacity:.32}
+.copy{position:absolute;left:470px;top:150px}
+h1{font-family:var(--display);font-weight:600;font-size:86px;line-height:1.04;letter-spacing:-.025em}
+p{margin-top:26px;font-size:29px;color:var(--tx2);letter-spacing:.005em}
+.rule{position:absolute;left:470px;top:118px;width:64px;height:5px;border-radius:3px;background:var(--jade)}
+</style>
+</head>
+<body>
+<svg class="arcs" width="600" height="600" viewBox="0 0 120 120"><path d="M60 18 A42 42 0 0 1 95 78" fill="none" stroke="#CBA54C" stroke-width="2.6" stroke-linecap="round"/><path d="M60 102 A42 42 0 0 1 25 42" fill="none" stroke="#0EA47D" stroke-width="2.6" stroke-linecap="round"/></svg>
+<span class="rule"></span>
+<div class="copy">
+  <h1>Make the habit measurable.</h1>
+  <p>Trading journal &amp; risk analytics for futures traders.</p>
+</div>
+</body>
+</html>
