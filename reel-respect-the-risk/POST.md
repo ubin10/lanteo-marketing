@@ -18,7 +18,7 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 ## Caption (Instagram)
 > Two good trades. A payout in sight. So you size up and stop braking for the corners.
 >
-> Most accounts don't go on the first loss. They go on the trade after the confidence.
+> Keep your pace. Know when you have to slow down. Safe journey to your goal.
 >
 > Lanteo reads your order fills and shows you what your own trading does after a win streak, with the trades that prove it.
 >
@@ -28,7 +28,6 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 >
 > #futurestrading #propfirm #daytrading #tradingpsychology #riskmanagement
 
-Note: line 2 is a framing, not a statistic. If you want it stricter, use "Accounts rarely go on the first loss."
 
 ## YouTube Short
 **Title:** Respect the risk #futurestrading
