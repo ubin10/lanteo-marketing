@@ -16,7 +16,7 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 - **v1 or v3:** Instagram → Advanced settings → **AI label** on; YouTube → **Yes** to "altered or synthetic content".
 
 ## Caption (Instagram)
-> Clean trades, right on your plan. A payout in sight. Then the market speeds up, and you don't slow down with it.
+> Clean trades, right on your plan. A payout in sight. Then volatility jumps, and you trade it like any other day. Or worse, you speed up to reach it faster.
 >
 > Keep your pace. Know when you have to slow down. Safe journey to your goal.
 >
