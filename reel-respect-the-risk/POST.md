@@ -1,6 +1,6 @@
 # Reel: "Respect the risk"
 
-**Pillar:** P1 Habit Lab (after-a-win-streak / sizing up after wins) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** 10.5s · 1080×1920
+**Pillar:** P1 Habit Lab (trading to plan, then not sizing down when volatility picks up because the payout feels close) · **Format:** IG Reel + the same file as a YouTube Short · **Length:** 10.5s · 1080×1920
 
 ## Versions
 | | File (in `G:\My Drive\EdgeKeeper\video\`) | Picture | Build |
@@ -16,11 +16,11 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 - **v1 or v3:** Instagram → Advanced settings → **AI label** on; YouTube → **Yes** to "altered or synthetic content".
 
 ## Caption (Instagram)
-> Two good trades. A payout in sight. So you size up and stop braking for the corners.
+> Clean trades, right on your plan. A payout in sight. Then the market speeds up, and you don't slow down with it.
 >
 > Keep your pace. Know when you have to slow down. Safe journey to your goal.
 >
-> Lanteo reads your order fills and shows you what your own trading does after a win streak, with the trades that prove it.
+> Lanteo checks your trades against your own rules and shows you the day you stopped braking, trade by trade.
 >
 > Respect the risk. 7-day trial, no card → link in bio
 >
@@ -34,4 +34,4 @@ In all versions the crash is built in editing (roll, shake, zoom, cut to black, 
 **Description:** caption paragraphs 1–3 + `https://lanteo.app/?utm_source=youtube` + the disclaimer.
 
 ## Story
-Reshare with a poll: **"Ever sized up right after a winning streak?"** Guilty 🙋 / Never.
+Reshare with a poll: **"Ever kept full size on a wild day because the payout was close?"** Guilty 🙋 / Never.
